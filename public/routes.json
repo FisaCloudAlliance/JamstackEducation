@@ -1,0 +1,17 @@
+{
+    "routes": [
+        {
+            "route": "/api/*",
+            "statusCode": 200
+        },
+        {
+            "route": "/*",
+            "serve": "/index.html",
+            "statusCode": 200
+        }
+    ],
+    "defaultHeaders": {},
+    "mimeTypes": {
+        "custom": "text/html"
+    }
+}

@@ -1,0 +1,13 @@
+body {
+  overflow-y: auto;
+  height: 100%;
+  -webkit-overflow-scrolling: auto;
+  overflow-scrolling: auto;
+
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
