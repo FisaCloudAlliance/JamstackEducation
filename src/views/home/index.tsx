@@ -3,6 +3,9 @@ import React from "react";
 import { useHome } from "./useHome";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 type Props = {};
 /**
@@ -18,12 +21,27 @@ const View: React.FC<Props> = (props) => {
     <Grid container>
       {/* 箱の中は12分割してレイアウトを構成する */}
       <Grid item xs={4} sx={{ backgroundColor: "#ecb2cd96" }}>
-        Hello
-        <Stack spacing={2} direction="row">
-          <Button variant="text">Link</Button>
-          <Button variant="contained">Container</Button>
-          <Button variant="outlined">Line</Button>
-        </Stack>
+        <Grid container>Hello</Grid>
+        <Grid container>
+          <Stack spacing={2} direction="row">
+            <Button variant="text">Link</Button>
+            <Button variant="contained">Container</Button>
+            <Button variant="outlined">Line</Button>
+          </Stack>
+        </Grid>
+        <Grid container>
+          <FormGroup>
+            <FormControlLabel
+              control={<Checkbox defaultChecked />}
+              label="Label"
+            />
+            <FormControlLabel
+              disabled
+              control={<Checkbox />}
+              label="Disabled"
+            />
+          </FormGroup>
+        </Grid>
       </Grid>
       <Grid item xs={1} sx={{ backgroundColor: "" }}>
         World
