@@ -1,19 +1,47 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { useHome } from "./useHome";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 type Props = {};
+/**
+ * home画面の外観を定義する　tsxファイル
+ * @param props
+ * @returns
+ */
 const View: React.FC<Props> = (props) => {
   const { children, ...rest } = props;
+  const context = useHome();
   return (
+    // Grid のコンテナー属性野あるものが、1つの箱になる
     <Grid container>
-      <Grid item xs={4} sx={{ backgroundColor: "#F2987D" }}>
+      {/* 箱の中は12分割してレイアウトを構成する */}
+      <Grid item xs={4} sx={{ backgroundColor: "#ecb2cd96" }}>
         Hello
+        <Stack spacing={2} direction="row">
+          <Button variant="text">Link</Button>
+          <Button variant="contained">Container</Button>
+          <Button variant="outlined">Line</Button>
+        </Stack>
       </Grid>
-      <Grid item xs={4} sx ={{ backgroundColor: ""}}>
+      <Grid item xs={1} sx={{ backgroundColor: "" }}>
         World
       </Grid>
-      <Grid item xs={4} sx ={{ backgroundColor: "#C1DBDA"}}>
-        ふくおかクラウドアライアンス
+      <Grid item xs={2} sx={{ backgroundColor: "#C1DBDA" }}>
+        Hey
+      </Grid>
+      <Grid item xs={3} sx={{ backgroundColor: "#45b2aecf" }}>
+        Hey
+      </Grid>
+      <Grid item xs={2} sx={{ backgroundColor: "" }}>
+        Hello
+      </Grid>
+      <Grid item xs={6} sx={{ backgroundColor: "#ffbb76cc" }}>
+        Word
+      </Grid>
+      <Grid item xs={6} sx={{ backgroundColor: "#ecb2cd96" }}>
+        Hello
       </Grid>
     </Grid>
   );
