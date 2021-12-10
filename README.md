@@ -1,2 +1,5 @@
 # JamstackEducation
-2021年12月10日　ふくおかクラウドアライアンス 　Jamstack勉強会用のReact Hooks リポジトリ
+
+2021 年 12 月 10 日　ふくおかクラウドアライアンス 　 Jamstack 勉強会用の React Hooks リポジトリ
+
+suenagajulia コメントを追加する
