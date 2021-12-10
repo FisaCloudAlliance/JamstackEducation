@@ -24,7 +24,7 @@ const Index: React.FC<Props> = (props) => {
   const context = useAppBar();
   return (
     <StyledAppBar
-      elevation={0 /* タイトルバーのshadowスタイルを消す */}
+      //elevation={0 /* タイトルバーのshadowスタイルを消す */}
       position="fixed"
     >
       <Headroom>
