@@ -1,0 +1,65 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"label": "npm: start",
+			"detail": "react-scripts start",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "custom",
+				"pattern": {
+					"regexp": "ˆ$"
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "Compiling...",
+					"endsPattern": "Compiled .*"
+				}
+			}
+		},
+		{
+			"type": "func",
+			"command": "host start",
+			"problemMatcher": "$func-node-watch",
+			"isBackground": true,
+			"dependsOn": "npm build (functions)",
+			"options": {
+				"cwd": "${workspaceFolder}/src\\api"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "npm build (functions)",
+			"command": "npm run build",
+			"dependsOn": "npm install (functions)",
+			"problemMatcher": "$tsc",
+			"options": {
+				"cwd": "${workspaceFolder}/src\\api"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "npm install (functions)",
+			"command": "npm install",
+			"options": {
+				"cwd": "${workspaceFolder}/src\\api"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "npm prune (functions)",
+			"command": "npm prune --production",
+			"dependsOn": "npm build (functions)",
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/src\\api"
+			}
+		}
+	]
+}
