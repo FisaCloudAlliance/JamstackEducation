@@ -1,3 +1,4 @@
+import { ICards } from "./card/model";
 import { IDrawer } from "./drawer/model";
 import { ITitle } from "./layout/model";
 import { IOverlay } from "./overlay/model";
@@ -8,4 +9,5 @@ export interface IRootState {
   overlay: IOverlay;
   drawer: IDrawer;
   title: ITitle;
+  cards: ICards;
 }

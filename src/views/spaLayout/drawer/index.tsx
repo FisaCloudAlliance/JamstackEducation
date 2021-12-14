@@ -20,6 +20,8 @@ const items: {
   { title: "サンプル - 1", to: "/sample1", icon: <HomeIcon /> },
   { title: "サンプル - 2", to: "/sample2", icon: <HomeIcon /> },
   { title: "サンプル - 3", to: "/sample3", icon: <HomeIcon /> },
+  { title: "Redux - 1", to: "/redux1", icon: <HomeIcon /> },
+  { title: "Redux - 2", to: "/redux2", icon: <HomeIcon /> },
 ];
 
 type Props = {};
