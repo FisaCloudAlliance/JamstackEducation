@@ -1,5 +1,4 @@
-import { useState, useCallback, useRef } from "react";
-import { ProviderContextImpl, useToast } from "../core/snackbarExtension";
+import { useToast } from "../core/snackbarExtension";
 import { validator } from "./useValidatedState";
 
 export function useValidatedStateArray(...array: validator[]) {
@@ -37,10 +36,14 @@ export function useValidatedStateArray(...array: validator[]) {
     return true;
   };
 
-  const clear = () => {
+  /**
+   * エラー状態をクリアする
+   * @param setInitialValue ステータスを初期値に戻す場合は true 
+   */
+  const clear = (setInitialValue?: boolean) => {
     for (let index = 0; index < array.length; index++) {
         const element : any = array[index];
-        element.errorReset();
+        element.errorReset(setInitialValue);
       }
   };
 

@@ -20,8 +20,18 @@ const items: {
   { title: "サンプル - 1", to: "/sample1", icon: <HomeIcon /> },
   { title: "サンプル - 2", to: "/sample2", icon: <HomeIcon /> },
   { title: "サンプル - 3", to: "/sample3", icon: <HomeIcon /> },
+  { title: "サンプル - 10", to: "/sample10", icon: <HomeIcon /> },
+  { title: "サンプル - 11", to: "/sample11", icon: <HomeIcon /> },
+  { title: "サンプル - 20", to: "/sample20", icon: <HomeIcon /> },
+  { title: "サンプル - 21", to: "/sample21", icon: <HomeIcon /> },
+  { title: "サンプル - 30", to: "/sample30", icon: <HomeIcon /> },
+  { title: "サンプル - 31", to: "/sample31", icon: <HomeIcon /> },
+  { title: "サンプル - 40", to: "/sample40", icon: <HomeIcon /> },
+  { title: "サンプル - 41", to: "/sample41", icon: <HomeIcon /> },
   { title: "Redux - 1", to: "/redux1", icon: <HomeIcon /> },
   { title: "Redux - 2", to: "/redux2", icon: <HomeIcon /> },
+  { title: "API - 1", to: "/api1", icon: <HomeIcon /> },
+  { title: "API - 2", to: "/api2", icon: <HomeIcon /> },
 ];
 
 type Props = {};

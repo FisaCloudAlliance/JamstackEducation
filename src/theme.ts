@@ -99,6 +99,14 @@ theme = createTheme(theme, {
         }
       }
     },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          position: "absolute",
+          bottom: "0",
+        },
+      },
+    },    
   },
 
   // breakpoints :{

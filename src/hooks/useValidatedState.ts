@@ -11,7 +11,11 @@ export type validation = {
  * @param validator
  * @param initialValue
  */
-export const useValidatedState = <T>(validator, initialValue?: T) => {
+export const useValidatedState = <T>(
+  validator,
+  initialValue?: T,
+  option?: { maxLength?: number }
+) => {
   const [state, setState] = useState<T | undefined>(initialValue);
 
   const _validation = useRef<validation>({
@@ -22,6 +26,13 @@ export const useValidatedState = <T>(validator, initialValue?: T) => {
 
   const onChange = useCallback(
     (nextValue) => {
+      if (
+        option?.maxLength &&
+        nextValue?.length &&
+        option?.maxLength < nextValue?.length
+      ) {
+        return;
+      }
       setState(nextValue);
       const valid = validator(nextValue);
       _validation.current = {
@@ -48,13 +59,16 @@ export const useValidatedState = <T>(validator, initialValue?: T) => {
     return _validation.current;
   };
 
-  const errorReset = () => {
+  const errorReset = (setInitialValue?: boolean) => {
     _validation.current = {
       ..._validation.current,
       changed: true,
       errorMessage: "",
       hasError: false,
     };
+    if (setInitialValue) {
+      setState(initialValue);
+    }
   };
 
   const validation = _validation.current;
@@ -69,5 +83,5 @@ export type validateState = validator &
   validation & {
     state: any;
     onChange: (v: any) => void;
-    errorReset: () => void;
+    errorReset: (setInitialValue?: boolean) => void;
   };
