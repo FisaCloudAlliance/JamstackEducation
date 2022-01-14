@@ -31,9 +31,9 @@ const Sample10: React.FC<Props> = (props) => {
         xs={12}
         sm={6}
         md={4}
-        onClick={context.action2} /** 関数を渡すパターン */
+        
       >
-        <Button variant="text">Text</Button>
+        <Button variant="text" onClick={context.action2} /** 関数を渡すパターン */>Text</Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>

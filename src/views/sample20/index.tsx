@@ -5,6 +5,7 @@ type Props = {};
 const Sample20: React.FC<Props> = (props) => {
   // sample10 とは異なり、context としてオブジェクトとして取得するのではなく、その中のメンバーを直接取得するTypeScriptの記法
   const { value, onCheckChanged } = useSample20();
+    
   return (
     <Grid container>
       <Grid item xs={12} sm={6}>
