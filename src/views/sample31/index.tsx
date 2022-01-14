@@ -4,7 +4,7 @@ import { useSample31 } from "./useSample31";
 type Props = {};
 
 const Sample31: React.FC<Props> = (props) => {
-//   const {  } = useSample31();
+  const { state, onClick } = useSample31();
   return (
     <Grid container>
       <Grid item xs={12}>
@@ -16,13 +16,19 @@ const Sample31: React.FC<Props> = (props) => {
               placeholder="7000000000"
               type="tel" /* type tel の場合、スマホだと数字入力のみのキーボードがせりあがるので、数値入力が楽になるhackコード */
               InputLabelProps={{ shrink: true }}
+
+              
+              value={state.state}
+              onChange={(e) => state.onChange(e.target.value)}
+              error={state.hasError}
+              helperText={state.errorMessage}
             />
           </Grid>
           <Grid xs={12} sm={6} md={4}>
-            <Typography>現在の入力値：</Typography>
+            <Typography>現在の入力値：{state.state}</Typography>
           </Grid>
           <Grid xs={12} sm={6} md={4}>
-            <Button>Validationの実行！</Button>
+            <Button　onClick={onClick}>Validationの実行！</Button>
           </Grid>
         </Grid>
       </Grid>
