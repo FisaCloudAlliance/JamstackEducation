@@ -8,15 +8,15 @@ const Sample11: React.FC<Props> = (props) => {
   return (
     <Grid container>
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="contained">Hello</Button>
+        <Button onClick={() => context.action1()} variant="contained">Hello</Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="text">World</Button>
+        <Button onClick={() => context.action2()} variant="text">World</Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="outlined">Heelo World!</Button>
+        <Button onClick={() => context.sampleAction()} variant="outlined">Heelo World!</Button>
       </Grid>
     </Grid>
   );
