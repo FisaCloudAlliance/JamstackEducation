@@ -16,6 +16,10 @@ const Sample10: React.FC<Props> = (props) => {
   const context = useSample10();
   return (
     // Grid conteiner / Grid item は HTML のレイアウト構成の基本になるものです。react に限らず多くのCSSフレームワークが採用しているレイアウトの考え方です
+    /*レスポンシブル
+      xs スマホ
+      sm タブレット
+      md PC以上 */
     <Grid container>
       <Grid item xs={12} sm={6} md={4}>
         <Button
@@ -31,9 +35,8 @@ const Sample10: React.FC<Props> = (props) => {
         xs={12}
         sm={6}
         md={4}
-        onClick={context.action2} /** 関数を渡すパターン */
       >
-        <Button variant="text">Text</Button>
+        <Button variant="text" onClick={context.action2} /** 関数を渡すパターン */>Text</Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
