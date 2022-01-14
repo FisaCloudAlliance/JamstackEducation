@@ -1,7 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import { useSample10 } from "./useSample10";
 
-/* 
+/*
     Buttonに関するサンプルコードは https://mui.com/components/buttons/ にあります
 */
 

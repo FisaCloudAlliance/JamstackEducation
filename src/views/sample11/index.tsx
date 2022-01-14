@@ -8,15 +8,16 @@ const Sample11: React.FC<Props> = (props) => {
   return (
     <Grid container>
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="contained">Hello</Button>
+        <Button variant="contained" onClick={() => context.hello()}>Hello</Button>
+
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="text">World</Button>
+        <Button variant="text" onClick={() => context.world()}>World</Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="outlined">Heelo World!</Button>
+        <Button variant="outlined" onClick={() => context.sampleHelloworld()}>Hello World!</Button>
       </Grid>
     </Grid>
   );
