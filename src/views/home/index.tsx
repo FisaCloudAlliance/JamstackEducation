@@ -7,7 +7,7 @@ const View: React.FC<Props> = (props) => {
   return (
     <Grid container>
       <Grid item xs={4} sx={{ backgroundColor: "#F2987D" }}>
-        Hello
+        Hello!!!!!!!!!!!!
       </Grid>
       <Grid item xs={4} sx ={{ backgroundColor: ""}}>
         World
