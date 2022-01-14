@@ -8,7 +8,12 @@ const Sample11: React.FC<Props> = (props) => {
   return (
     <Grid container>
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="contained">Hello</Button>
+        <Button
+          variant="contained"
+          onClick={() => context.action11()}
+        >
+          Hello
+        </Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
