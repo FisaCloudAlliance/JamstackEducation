@@ -20,24 +20,23 @@ const Sample10: React.FC<Props> = (props) => {
       <Grid item xs={12} sm={6} md={4}>
         <Button
           variant="contained"
-          onClick={() => context.action1()} /** ラムダで紐付けるパターン */
-        >
+          onClick={() => context.action1()} /** ラムダで紐付けるパターン */>
           Contained
         </Button>
       </Grid>
 
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        md={4}
-        onClick={context.action2} /** 関数を渡すパターン */
-      >
-        <Button variant="text">Text</Button>
+      <Grid item xs={12} sm={6} md={4} >
+        <Button
+          variant="text"
+          onClick={context.action2} /** 関数を渡すパターン */>
+          Text
+        </Button>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-        <Button variant="outlined" onClick={() => context.sampleAction()}>
+        <Button
+          variant="outlined"
+          onClick={() => context.sampleAction()}>
           Outlined
         </Button>
       </Grid>
